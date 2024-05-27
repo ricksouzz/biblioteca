@@ -1,7 +1,7 @@
 # Biblioteca Desafio Nivel 1
 
 # Sobre o Projeto
-Este projeto foi desenvolvido utilizando Java e Spring Boot. Optamos por utilizar o Spring Boot devido à sua robustez, facilidade de configuração e vasta comunidade de apoio. Além disso, a escolha do Spring Boot está alinhada com nossos objetivos de trabalho e estudos constantes neste framework.
+Este projeto foi desenvolvido utilizando Java e Spring Boot. Optei por utilizar o Spring Boot devido à sua robustez, facilidade de configuração e vasta comunidade de apoio. Além disso, a escolha do Spring Boot está devido ser objeto de trabalho e estudos constantemente.
 
 Tecnologias Utilizadas
 ```
