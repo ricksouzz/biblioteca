@@ -55,7 +55,7 @@ public class UsuarioController {
 			throw new CustomAuthenticationException("Login e/ou senha informada estão incorretos");
 		}
 	}
-
+ 
 	@PostMapping(path = "/recuperaSenha")
 	@ResponseStatus(code = HttpStatus.ACCEPTED)
 	public void recuperarSenha(@RequestBody String email) throws Exception {
