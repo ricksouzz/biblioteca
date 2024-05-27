@@ -2,19 +2,19 @@
 Para configurar a base de dados da aplicação, siga os passos abaixo:
 
 # Pré-requisitos
+```
 - PostgreSQL instalado e configurado
 - Acesso ao terminal ou ferramenta de gerenciamento de banco de dados (como pgAdmin)
 - Permissões adequadas para criar bancos de dados e tabelas
-
 // senha para os dois usuários preenchidos é: 123123.
-
-#Passos para Configuração
+```
+# Passos para Configuração
 - Criar o Banco de Dados:
-
+```
 CREATE DATABASE biblioteca;
-
+```
 - Criar as Tabelas e Inserir Dados Iniciais:
-
+```
 CREATE TABLE biblioteca.role (
     id INT PRIMARY KEY,
     name VARCHAR(50) NOT NULL
@@ -39,9 +39,10 @@ CREATE TABLE biblioteca.livro (
     CONSTRAINT fk_usuario FOREIGN KEY (id_usuario) REFERENCES biblioteca.usuario (id),
     CONSTRAINT fk_usuario_inclusao FOREIGN KEY (id_usuario_inclusao) REFERENCES biblioteca.usuario (id)
 );
+```
 
-- Inserção dos dados iniciais:
-  
+# Inserção dos dados iniciais:
+```
 INSERT INTO biblioteca.role (id, name) VALUES (1, 'SELECT');
 INSERT INTO biblioteca.role (id, name) VALUES (2, 'CREATE');
 INSERT INTO biblioteca.role (id, name) VALUES (3, 'UPDATE');
@@ -56,3 +57,4 @@ INSERT INTO biblioteca.livro (id, data_registro, evento_registro, id_usuario, id
 (2, '2024-05-27 09:30:32.979', 'I', 1, 1, 'Alexandre Dumas', 'O Conde de Monte Cristo'),
 (3, '2024-05-27 09:32:35.262', 'I', 1, 1, 'André Vianco', 'Bento'),
 (4, '2024-05-27 09:34:08.442', 'I', 2, 2, 'George R. R. Martin', 'A Song of Ice and Fire');
+```
