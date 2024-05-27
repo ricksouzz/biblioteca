@@ -63,7 +63,7 @@ public class LivroServiceImpl implements LivroService {
 		if (user.isAdministrator() || livro.getAtributoPadrao().getUsuarioIdInclusao().equals(userId)) {
 	        return livroRepository.save(livro);
 	    } else {
-	        throw new CustomAuthenticationException("Você só pode excluir livros que cadastrou.");
+	        throw new CustomAuthenticationException("Você só pode editar livros que cadastrou.");
 	    }
 	}
 
@@ -72,7 +72,7 @@ public class LivroServiceImpl implements LivroService {
 		
 		Long userId = getUserId();
 		Usuario user = usuarioRepository.findById(userId).get();
-		Livro livro = livroRepository.findById(userId).get();
+		Livro livro = livroRepository.findById(id).get();
 
 		if (user.isAdministrator() || livro.getAtributoPadrao().getUsuarioIdInclusao().equals(userId)) {
 			livroRepository.deleteById(id);

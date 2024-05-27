@@ -43,8 +43,8 @@ public class LivroController {
 	};
 	
 	@PreAuthorize("hasRole('DELETE')")
-	@DeleteMapping
-	public void delete(@RequestParam("id") Long id) {
+	@DeleteMapping(path = "/{id}")
+	public void delete(@PathVariable Long id) {
 		livroServiceImpl.delete(id);
 	};
 }
